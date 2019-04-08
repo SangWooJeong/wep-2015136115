@@ -1,46 +1,130 @@
 # TableBoard_Shop
-ê²Œì‹œíŒ-Shop ì˜ TODO ì™„ì„±í•˜ê¸°!
+°Ô½ÃÆÇ-Shop ÀÇ TODO ¿Ï¼ºÇÏ±â!
 
-## ê¸°ì¡´ íŒŒì¼
+## ±âÁ¸ ÆÄÀÏ
 ```
  .
-â”œâ”€â”€ css - board_form.phpì™€ index.php ì—ì„œ ì‚¬ìš©í•˜ëŠ” stylesheet
-â”‚   â””â”€â”€ ...
-â”œâ”€â”€ fonts - í°íŠ¸
-â”‚   â””â”€â”€ ...
-â”œâ”€â”€ images - ì•„ì´ì½˜ ì´ë¯¸ì§€
-â”‚   â””â”€â”€ ...
-â”œâ”€â”€ vender - ì™¸ë¶€ ë¼ì´ë¸ŒëŸ¬ë¦¬
-â”‚   â””â”€â”€ ...
-â”œâ”€â”€ js - board_form.phpì™€ index.php ì—ì„œ ì‚¬ìš©í•˜ëŠ” javascript
-â”‚   â””â”€â”€ ...
-â”œâ”€â”€ function
-â”‚   â””â”€â”€ insert.php - ê²Œì‹œê¸€ ì‘ì„± ê¸°ëŠ¥ êµ¬í˜„
-â”‚   â””â”€â”€ update.php - ê²Œì‹œê¸€ ìˆ˜ì • ê¸°ëŠ¥ êµ¬í˜„
-â”‚   â””â”€â”€ delete.php - ê²Œì‹œê¸€ ì‚­ì œ ê¸°ëŠ¥ êµ¬í˜„
-â”œâ”€â”€ board_form.php - ê²Œì‹œê¸€ ì‘ì„±/ìˆ˜ì • ì‹œ ì‚¬ìš©í•˜ëŠ” formì´ í¬í•¨ëœ php íŒŒì¼
-â”œâ”€â”€ index.php - ê²Œì‹œê¸€ ì¡°íšŒ ê¸°ëŠ¥ êµ¬í˜„
+¦§¦¡¦¡ css - board_form.php¿Í index.php ¿¡¼­ »ç¿ëÇÏ´Â stylesheet
+¦¢   ¦¦¦¡¦¡ ...
+¦§¦¡¦¡ fonts - ÆùÆ®
+¦¢   ¦¦¦¡¦¡ ...
+¦§¦¡¦¡ images - ¾ÆÀÌÄÜ ÀÌ¹ÌÁö
+¦¢   ¦¦¦¡¦¡ ...
+¦§¦¡¦¡ vender - ¿ÜºÎ ¶óÀÌºê·¯¸®
+¦¢   ¦¦¦¡¦¡ ...
+¦§¦¡¦¡ js - board_form.php¿Í index.php ¿¡¼­ »ç¿ëÇÏ´Â javascript
+¦¢   ¦¦¦¡¦¡ ...
+¦§¦¡¦¡ function
+¦¢   ¦¦¦¡¦¡ insert.php - °Ô½Ã±Û ÀÛ¼º ±â´É ±¸Çö
+¦¢   ¦¦¦¡¦¡ update.php - °Ô½Ã±Û ¼öÁ¤ ±â´É ±¸Çö
+¦¢   ¦¦¦¡¦¡ delete.php - °Ô½Ã±Û »èÁ¦ ±â´É ±¸Çö
+¦§¦¡¦¡ board_form.php - °Ô½Ã±Û ÀÛ¼º/¼öÁ¤ ½Ã »ç¿ëÇÏ´Â formÀÌ Æ÷ÇÔµÈ php ÆÄÀÏ
+¦§¦¡¦¡ index.php - °Ô½Ã±Û Á¶È¸ ±â´É ±¸Çö
 ```
 
-## MySQL í…Œì´ë¸” ìƒì„±!
+## MySQL Å×ÀÌºí »ı¼º!
 
-[ì—¬ê¸°ì— í…Œì´ë¸” ìƒì„± ì‹œ, ì‚¬ìš©í•œ Query ë¥¼ ì‘ì„±í•˜ì„¸ìš”.]
+[¿©±â¿¡ Å×ÀÌºí »ı¼º ½Ã, »ç¿ëÇÑ Query ¸¦ ÀÛ¼ºÇÏ¼¼¿ä.]
 Note: 
-- table ì´ë¦„ì€ tableboard_shop ìœ¼ë¡œ ìƒì„±
-- ê¸°ë³¸í‚¤ëŠ” num ìœ¼ë¡œ, ê·¸ ì™¸ì˜ ì†ì„±ì€ board_form.php ì˜ input íƒœê·¸ name ì— í‘œì‹œëœ ì†ì„± ì´ë¦„ìœ¼ë¡œ ìƒì„±
-- ê° ì†ì„±ì˜ type ì€ ììœ ë¡­ê²Œ ì„¤ì • (ë‹¨, ì…ë ¥ë˜ëŠ” ê°’ì˜ íƒ€ì…ê³¼ ì¼ì¹˜í•´ì•¼ í•¨)
-    - ex) price -> int
-    - ex) name -> char or varchar
+- table ÀÌ¸§Àº tableboard_shop À¸·Î »ı¼º
+- ±âº»Å°´Â num À¸·Î, ±× ¿ÜÀÇ ¼Ó¼ºÀº board_form.php ÀÇ input ÅÂ±× name ¿¡ Ç¥½ÃµÈ ¼Ó¼º ÀÌ¸§À¸·Î »ı¼º
+- °¢ ¼Ó¼ºÀÇ type Àº ÀÚÀ¯·Ó°Ô ¼³Á¤ (´Ü, ÀÔ·ÂµÇ´Â °ªÀÇ Å¸ÀÔ°ú ÀÏÄ¡ÇØ¾ß ÇÔ)
+  
+  
+
+   create table tableboard_shop(
+    num int(11),
+    Date char(20),
+    Orderid int(10), 
+    Name char(50),
+    Price int (20),
+    Quantity int(10),
+    primary key(num) 
+   )
+
+## board_form.php ¼öÁ¤
+  [¿©±â¿¡ board_form.php ¸¦ ¾î¶»°Ô ¼öÁ¤Çß´ÂÁö, ¼³¸íÀ» ÀÛ¼ºÇÏ¼¼¿ä.]
+   
+   ¿ì¼± µğºñ ¿¬µ¿À» À§ÇØ  
+   $connect = mysql_connect("localhost","jsw","1234");
+                 mysql_select_db("jsw_db", $connect);
+    ±¸¹®À» ÀÛ¼ºÇÏ°í 
     
-## index.php ìˆ˜ì •
-[ì—¬ê¸°ì— index.php ë¥¼ ì–´ë–»ê²Œ ìˆ˜ì •í–ˆëŠ”ì§€, ì„¤ëª…ì„ ì‘ì„±í•˜ì„¸ìš”.]
+   $sql = "select * from tableboard_shop where num= $_GET[num]";
+        $result = mysql_query($sql);
+        $row = mysql_fetch_row($result);
+    tableboard_shop Å×ÀÌºí¿¡¼­ num °ª¿¡¸Â´Â µ¥ÀÌÅÍ¸¦ index¿¡¼­ °¡Á®¿Í Äõ¸®¸¦ 
+    »ı¼ºÇÏ°í Äõ¸®¹®À» ½ÇÇàÇÔ ÈÄ¿¡
+        <td class="column1"> <input name="date" type="text" value="<? echo $row[1]; ?>" /> </td>
+                                    <td class="column2"> <input name="order_id" type="number" value="<? echo $row[2]; ?>" /> </td>
+                                    <td class="column3"> <input name="name" type="text" value="<?  echo $row[3]; ?>" /> </td>
+                                    <td class="column4"> <input name="price" type="number" placeholder="$" style="text-align: right;" value="<? echo $row[4]; ?>" /> </td>
+                                    <td class="column5"> <input name="quantity" type="number" value="<? echo $row[5]; ?>" style="text-align: right;" /> </td>
+                                    <td class="column6"> $<span id="total"> <? echo $row[4]*$row[5]; ?> </span> </td>
 
+   ÀÌ ±¸¹®¿¡¼­ °¢¿­¿¡ ¸Â´Â echo $row ¸¦ Áı¾î³ÖÀ½
+
+## index.php ¼öÁ¤
+[¿©±â¿¡ index.php ¸¦ ¾î¶»°Ô ¼öÁ¤Çß´ÂÁö, ¼³¸íÀ» ÀÛ¼ºÇÏ¼¼¿ä.]
+ 
+  À§¿Í ¸¶Âù°¡Áö·Î  µğºñ ¿¬µ¿À» À§ÇØ 
+   $connect = mysql_connect("localhost","jsw","1234");
+                   mysql_select_db("jsw_db", $connect);
+      ±¸¹®À» ÀÛ¼ºÇÏ°í ¹ØÁÙ¿¡ Äõ¸®¸¦ ÀÛ¼ºÇÏ°í ½ÇÇàÇÑ´Ù.
+    ÀÌ ¶§ mysql_num_rows ÇÔ¼ö¸¦ »ç¿ëÇÏ¿©  Äõ¸®ÀÇ ÇàÀÇ°³¼ö¸¦ ÆÇ´ÜÇÏ°í 
+    ÀÌ¸¦ $numsort º¯¼ö¿¡ ÀúÀåÇÑ´Ù
+    
+   ±×ÈÄ <tbody> ¾È¿¡ for¹®À¸·Î numsortÀÇ ¼ö¸¸Å­ ¹İº¹ÇÏ¿© Ä¿¸®¸¦ Ãâ·ÂÇÏ´Â 
+   ±¸¹®À» ÄÚµùÇÏ¿´´Ù ¶ÇÇÑ ¸¶Áö¸· column6´Â °ªÀÌ Áßº¹µÇ¹Ç·Î column4¿Í column5ÀÇ 
+   °öÀ¸·Î Ç¥Çö ÇÏ¿´°í ¸ğµç columnÀÌ ³¡³¯¶§¸¶´Ù $row = mysql_fetch_array($result);
+   ±¸¹®À» »ç¿ëÇÏ¿© ´ÙÀ½ ÇàÀ¸·Î ³Ñ¾î°¬´Ù.
+      
 ## function
-### insert.php ìˆ˜ì •
-[ì—¬ê¸°ì— insert.php ë¥¼ ì–´ë–»ê²Œ ìˆ˜ì •í–ˆëŠ”ì§€, ì„¤ëª…ì„ ì‘ì„±í•˜ì„¸ìš”.]
+ ¸¶Âù°¡Áö·Î °¢ function ¿¡µµ    µğºñ ¿¬µ¿À» À§ÇØ  
+      $connect = mysql_connect("localhost","jsw","1234");      
+       mysql_select_db("jsw_db", $connect);
+       ±¸¹®À» °øÅëÀûÀ¸·Î »ç¿ëÇÏ¿´´Ù                            
 
-### update.php ìˆ˜ì •
-[ì—¬ê¸°ì— update.php ë¥¼ ì–´ë–»ê²Œ ìˆ˜ì •í–ˆëŠ”ì§€, ì„¤ëª…ì„ ì‘ì„±í•˜ì„¸ìš”.]
+### insert.php ¼öÁ¤
+[¿©±â¿¡ insert.php ¸¦ ¾î¶»°Ô ¼öÁ¤Çß´ÂÁö, ¼³¸íÀ» ÀÛ¼ºÇÏ¼¼¿ä.]
+±âº»ÀûÀ¸·Î  tableÀ» ÀÛ¼ºÇÒ¶§ num °ªÀÌ ÀÚµ¿À¸·Î ¿Ã¶ó°¡´Â ¼³Á¤ÀÌ ÀÖ±â¿¡  ÀÌ¸¦ »ç¿ëÇÏ¿´´Ù #AUTO_INCREMENT
+Ä¿¸®¿¡ »õ·Î¿î °ªÀ» ³Ö±â À§ÇØ insert¸¦ »ç¿ëÇÏ¿´°í °¢ °ªµéÀ» $_POST¸¦ »ç¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ Ã³¸®ÇÏ¿´´Ù
+¶ÇÇÑ ¿¡·¯ Ç¥½Ã±¸¹®À» result°ªÀÌ ¾øÀ» ¶§¸¸ ³ª¿Àµµ·Ï º¯°æÇÏ¿´´Ù.
+[Ãß°¡ÇÑºÎºĞ]
+ $sql = "insert into tableboard_shop(Date,Orderid,Name,Price,Quantity)
+ values('$_POST[date]','$_POST[order_id]','$_POST[name]','$_POST[price]','$_POST[quantity]')";
+ $result = mysql_query($sql);
+ 
+ 
+### update.php ¼öÁ¤
+[¿©±â¿¡ update.php ¸¦ ¾î¶»°Ô ¼öÁ¤Çß´ÂÁö, ¼³¸íÀ» ÀÛ¼ºÇÏ¼¼¿ä.]
+µ¥ÀÌÅÍ º£ÀÌ½º¿¡ °ªµéÀ» ¼öÁ¤ÇÏ±âÀ§ÇØ update¸¦ »ç¿ëÇÏ¿´°í ³¡¿¡ where num = $_GET[num] À» »ç¿ëÇÏ¿© 
+¹Ş¾Æ¿Â ¾Ë¸ÂÀº À§Ä¡¿¡ °ªÀÌ º¯ÇÒ¼ö ÀÖµµ·ÏÇÏ¿´´Ù.
 
-### delete.php ìˆ˜ì •
-[ì—¬ê¸°ì— delete.php ë¥¼ ì–´ë–»ê²Œ ìˆ˜ì •í–ˆëŠ”ì§€, ì„¤ëª…ì„ ì‘ì„±í•˜ì„¸ìš”.]
+[Ãß°¡ÇÑºÎºĞ]
+$sql = "update tableboard_shop set Date='$_POST[date]',OrderId= '$_POST[order_id]' ,Name='$_POST[name]',Price='$_POST[price]',Quantity='$_POST[quantity]' where num = $_GET[num]";
+$result = mysql_query($sql);
+
+
+
+##delete.php ¼öÁ¤
+[¿©±â¿¡ delete.php ¸¦ ¾î¶»°Ô ¼öÁ¤Çß´ÂÁö, ¼³¸íÀ» ÀÛ¼ºÇÏ¼¼¿ä.]
+delete ±¸¹®ÀÚÃ¼´Â ¾Õ¿¡¼­¿Í °°ÀÌ $_GETÀ¸·Î °ªÀ» ¹Ş¾Æ¿Í¼­ ºñ±³ÇÏ¿© »èÁ¦ÇÏ´Â ¹æ½ÄÀ¸·Î
+¶È°°¾ÒÁö¸¸ delete ÈÄ ´Ù½Ã insert¸¦ ÇßÀ»½Ã¿¡ num°ªÀÌ »ç¶óÁø ÇàÀ» °è¼Ó Ãë±ŞÇÏ¿© °ªÀÌ¿Ã¶ó°¡ ex)(Ãß°¡)1->(Ãß°¡)2->(Ãß°¡)3->(2»èÁ¦)->(Ãß°¡)4
+ÀÌ¸¦ ÇØ°áÇÏ±â À§ÇØ¼­ add¶ó´Â º¯¼ö¸¦ 0À¸·Î ÃÊ±âÈ­ ÈÄ µ¥ÀÌÅÍ º£ÀÌ½º¾È¿¡ num¿­À» add¿¡ +1ÇÑ°ªÀ¸·Î ÃÊ±âÈ­ÇÏ°í 
+´Ù½Ã AUTO_INCREMENT¸¦ »ç¿ëÇÏ¿´´Ù ¶ÇÇÑ ÇØ´ç ´Ü°èµéÀÌ ÇÏ³ª¶óµµ ½ÇÇàÀÌ µÇÁö¾ÊÀ¸¸é ¿¡·¯°¡ ¶ßµµ·Ï
+!(result || !$setresult || !$updatresult || $alterre) ±¸¹®À» »ç¿ëÇÏ¿´´Ù
+
+[Ãß°¡ÇÑºÎºĞ]
+
+
+$sql = "delete from tableboard_shop where num=$_GET[num]";
+$result = mysql_query($sql);
+
+$set1="set @add=0";
+$updat1="update tableboard_shop set num =@add:=@add+1";
+$alter1="alter table tableboard_shop auto_increment=1";
+
+$setresult=mysql_query($set1);
+$updatresult=mysql_query($updat1);
+$alterre=mysql_query($alter1);

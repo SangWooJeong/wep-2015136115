@@ -6,10 +6,28 @@
  * Time: 오전 9:39
  */
 
+$connect = mysql_connect("localhost","jsw","1234");
+mysql_select_db("jsw_db", $connect);
+
+$sql = "delete from tableboard_shop where num=$_GET[num]";
+$result = mysql_query($sql);
+
+$set1="set @add=0";
+$updat1="update tableboard_shop set num =@add:=@add+1";
+$alter1="alter table tableboard_shop auto_increment=1";
+
+$setresult=mysql_query($set1);
+$updatresult=mysql_query($updat1);
+$alterre=mysql_query($alter1);
+
+
+
 # TODO: MySQL DB에서, num에 해당하는 레코드 삭제하기!
 
 # 참고 : 에러 메시지 출력 방법
-echo "<script> alert('delete - error message') </script>"
+
+if(!(result || !$setresult || !$updatresult || $alterre))
+    echo    "<script> alert('delete - error message') </script>"
 
 ?>
 
