@@ -4,12 +4,12 @@
 $connect = mysql_connect("localhost","jsw","1234");
 mysql_select_db("jsw_db", $connect);
 
-$sql = "select * from boardz where title like '%%$_POST[search]'";
+$sql = "select * from boardz where title like '%$_POST[search]%'";
 
 
 $result = mysql_query($sql);
-$row = mysql_fetch_array($result);
-
+$num = mysql_num_rows($result);
+echo $num;
 ?>
 
 
@@ -44,7 +44,7 @@ $row = mysql_fetch_array($result);
             <div class="text-center">
                 <h2>Beautiful <strong>Boardz</strong></h2>
                 <div style="display: block; width: 50%; margin-right: auto; margin-left: auto; position: relative;">
-                    <form class="example" action="action_page.php">
+                    <form class="example" action="board.php" method="post">
                         <input type="text" placeholder="Search.." name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
@@ -58,49 +58,106 @@ $row = mysql_fetch_array($result);
 
 
 
+
+<?php
+
+if ($num==7){
+    echo'
                 <ul>
                     <li>
-                        <h1>php</h1>
-                        <img src="http://2.bp.blogspot.com/-pINYV0WlFyA/VUK-QcGbU5I/AAAAAAAABcU/fNy2pd2cFRk/s1600/WEB-Jack-White-Poster-Creative.png" alt="demo image"/>
-                    </li>
+                     <h1>php</h1>
+                      <img src="http://2.bp.blogspot.com/-pINYV0WlFyA/VUK-QcGbU5I/AAAAAAAABcU/fNy2pd2cFRk/s1600/WEB-Jack-White-Poster-Creative.png" alt="demo image"/>
+                    </li >
 
-                    <li>
-                        <img src="http://payload140.cargocollective.com/1/10/349041/5110553/Florrie.jpg" alt="demo image"/>
-                    </li>
-                </ul>
+                    <li >
+                        <img src = "http://payload140.cargocollective.com/1/10/349041/5110553/Florrie.jpg" alt = "demo image" />
+                    </li >
+                </ul >
 
 
-                <ul>
-                    <li>
-                        <h1>Sumo</h1>
-                        <img src="http://wpmedia.ottawacitizen.com/2015/11/01.jpg?quality=55&strip=all&w=840&h=630&crop=1" alt="demo image"/>
-                    </li>
-                    <li>
+                <ul >
+                    <li >
+                        <h1 > Sumo</h1 >
+                        <img src = "http://wpmedia.ottawacitizen.com/2015/11/01.jpg?quality=55&strip=all&w=840&h=630&crop=1" alt = "demo image" />
+                    </li >
+                    <li >
 
-                        <img src="https://s-media-cache-ak0.pinimg.com/736x/8c/ee/ff/8ceeff967c03c7cf4f86391dd6366544.jpg" alt="demo image"/>
-                    </li>
-                    <li>
+                        <img src = "https://s-media-cache-ak0.pinimg.com/736x/8c/ee/ff/8ceeff967c03c7cf4f86391dd6366544.jpg" alt = "demo image" />
+                    </li >
+                    <li >
 
-                        <h1>wow</h1>
-                        <img src="https://s-media-cache-ak0.pinimg.com/originals/87/16/8c/87168cbbf07cb54a9793bebaa20b1bde.jpg" alt="demo image"/>
-                    </li>
-                </ul>
+                        <h1 ></h1 >
+                        <img src = "https://s-media-cache-ak0.pinimg.com/originals/87/16/8c/87168cbbf07cb54a9793bebaa20b1bde.jpg" alt = "demo image" />
+                    </li >
+                </ul >
 
-                <ul>
-                    <li>
-                        <h1>Sumo</h1>
-                        <img src="https://s-media-cache-ak0.pinimg.com/736x/22/95/48/229548086245c332443109ca9f2e0890.jpg" alt="demo image"/>
-                    </li>
-                    <li>
-                        <h1>Sumo Summo</h1>
-                        Ex nostrud verterem mea, duo no delicata neglegentur. Audire integre rationibus ut pri, ex cibo oblique euismod sit, cibo iracundia vix at. Legimus torquatos definiebas an nec, mazim postulant at sit. Ne qui quando vocent accusata, nam tritani fierent no. Ea per vocent voluptatibus.
+                <ul >
+                    <li >
+                        <h1 > Sumo</h1 >
+                        <img src = "https://s-media-cache-ak0.pinimg.com/736x/22/95/48/229548086245c332443109ca9f2e0890.jpg" alt = "demo image" />
+                    </li >
+                    <li >
+                        <h1 > Sumo Summo </h1 >
+        Ex nostrud verterem mea, duo no delicata neglegentur . Audire integre rationibus ut pri, ex cibo oblique euismod sit, cibo iracundia vix at . Legimus torquatos definiebas an nec, mazim postulant at sit . Ne qui quando vocent accusata, nam tritani fierent no . Ea per vocent voluptatibus .
 
                         <br />
 
-                        <img src="https://inspirationfeeed.files.wordpress.com/2014/01/ca402f7410884454ec5c303336e8591d1.jpg" alt="demo image"/>
+                        <img src = "https://inspirationfeeed.files.wordpress.com/2014/01/ca402f7410884454ec5c303336e8591d1.jpg" alt = "demo image" />
 
+                    </li >
+                </ul >
+                ';}
+
+
+else {
+
+    if($num==0){}
+
+    if($num>0)
+        {
+            echo '<ul>';
+            for($i=0;$i<$num;$i++) {
+                 if($i%3==0) {
+                    echo '<li>';
+                        echo '<h1>'; $need = mysql_result($result, $i, title); echo $need; echo '</h1>';
+                        echo '<img src="';$need = mysql_result($result, $i, image_url); echo $need; echo '" alt="demo image"/>';
+                    echo '</li>';
+          }
+            }
+
+            echo '</ul>';
+
+        }
+        if($num>1)
+        {
+            echo '<ul>';
+            for($i=0;$i<$num;$i++) {
+                if($i%3==1) {
+                    echo '<li>';
+                        echo '<h1>'; $need = mysql_result($result, $i, title); echo $need; echo '</h1>';
+                        echo '<img src="';$need = mysql_result($result, $i, image_url); echo $need; echo '" alt="demo image"/>
+                      </li>
+                      </ul>';
+              }
+            }
+        }
+        if($num>2)
+        {
+            echo '<ul>';
+            for($i=0;$i<$num;$i++) {
+                if($i%3==2) {
+                    echo '<li>';
+                        echo '<h1>'; $need = mysql_result($result, $i, title); echo $need; echo '</h1>';
+                        echo '<img src="';$need = mysql_result($result, $i, image_url); echo $need; echo '" alt="demo image"/>
                     </li>
-                </ul>
+                    </ul>';
+                }
+            }
+        }
+        }
+   ?>
+
+
 
             </div>
         </div>
@@ -110,3 +167,4 @@ $row = mysql_fetch_array($result);
     </div>
 </body>
 </html>
+
