@@ -31,16 +31,9 @@ $sql = "select * from boardz where title like '%$_POST[search]%'";
 그렇지 0인경우에는 아무것도 나타나지 않도록하였다.
 그리고 1개이상인 경우부터 3으로 나눠서 나머지를 구해 그 부분에 맞는 장소에  나타나도록 구현하였다.
 다음은 그 기능을 구현하기위한 코드이다
-<code>
-if($i%3==1) {
-                    echo '<li>';
-                        echo '<h1>'; $need = mysql_result($result, $i, title); echo $need; echo '</h1>';
-                        echo '<img src="';$need = mysql_result($result, $i, image_url); echo $need; echo '" alt="demo image"/>
-                      </li>
-                      </ul>';
-                      
-             }
-            </code>
+
+//코드를 쓸려고 했는데 코드가 실제 이문서에 적용되서 일단 뺏습니다...
+            
 보는 바와 같이 4개이상일경우 첫번째 라인에 2개의 사진이 나타나도록 구현했기에 데이터 양이 늘어난다하더라도 계속해서
 옆으로 생기지 않고 내려가는걸 확인 할 수 있었다.
                                                                                         
